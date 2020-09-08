@@ -12,9 +12,7 @@ module.exports = function transform(arr) {
       if (next) {
         next = false
       } else if (arr[i] === '--discard-prev' && arr[i - 2] !== '--discard-next') {
-        if (i !== 0) {
           transformedArr.pop();
-        }
       } else if (arr[i] === '--discard-next') {
         next = true;
       } else if (arr[i] === '--double-next') {
